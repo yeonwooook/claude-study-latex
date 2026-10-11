@@ -1,0 +1,3 @@
+# The MathJax bundle: minified third-party JavaScript kept as built. No text diff or line-ending
+# conversion.
+hooks/mathjax/*.js binary

@@ -1,0 +1,6 @@
+node_modules/
+mathjax-build/node_modules/
+mathjax-build/out/
+.claude-plugin/types/
+tsconfig.json
+.DS_Store

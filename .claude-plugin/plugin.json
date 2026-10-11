@@ -1,0 +1,29 @@
+{
+  "name": "study-latex",
+  "displayName": "Study LaTeX",
+  "version": "1.0.0",
+  "description": "Draws inline and display TeX math in Claude's replies in the Claude desktop app's Code tab, and on Windows with MiKTeX compiles TikZ figures; built for students who study with Claude. A fork of zaahiral/claude-latex 0.5.0",
+  "author": {
+    "name": "yeonwooook"
+  },
+  "homepage": "https://github.com/yeonwooook/claude-study-latex",
+  "repository": "https://github.com/yeonwooook/claude-study-latex",
+  "license": "MIT",
+  "keywords": ["latex", "math", "mathjax", "tikz", "study", "engineering", "mod"],
+  "userConfig": {
+    "colorScheme": {
+      "type": "string",
+      "title": "Math color",
+      "description": "auto follows the system light or dark setting. Pick light or dark if the app's theme differs from the system's.",
+      "default": "auto",
+      "options": ["auto", "light", "dark"]
+    },
+    "compileBlocks": {
+      "type": "boolean",
+      "title": "Compile TikZ blocks (Windows, MiKTeX)",
+      "description": "Off by default. On, ```tikz code blocks in replies are compiled into figures with your local MiKTeX (latex and dvisvgm). Read the README's safety section before turning it on.",
+      "default": false
+    }
+  },
+  "types": "./types/index.d.ts"
+}

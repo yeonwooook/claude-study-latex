@@ -1,0 +1,14 @@
+{
+  "name": "claude-study-latex",
+  "description": "LaTeX math and TikZ figures in Claude's replies, for students who study with Claude",
+  "owner": {
+    "name": "yeonwooook"
+  },
+  "plugins": [
+    {
+      "name": "study-latex",
+      "source": "./",
+      "description": "Draws inline and display TeX math in Claude's replies in the desktop Code tab, and on Windows with MiKTeX compiles TikZ figures"
+    }
+  ]
+}
