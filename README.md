@@ -1,7 +1,5 @@
 # Study LaTeX for Claude Code
 
-**[한국어 안내는 아래에 있어요](#한국어-안내)**
-
 In the Code tab of the Claude desktop app, only display blocks (`$$...$$` on their own lines) are
 drawn as math; inline math in a sentence shows as raw source
 ([anthropics/claude-code#65632](https://github.com/anthropics/claude-code/issues/65632)). For anyone
@@ -9,8 +7,7 @@ who studies with Claude (engineering, physics, maths) that makes every explanati
 
 This mod draws inline and display TeX math in Claude's replies as typeset formulas, tells Claude to
 write math that way, and, on Windows with MiKTeX, can compile TikZ figures such as free-body diagrams
-and plots. It was built by an engineering student who studies with Claude every day. It is a fork of
-[zaahiral/claude-latex](https://github.com/zaahiral/claude-latex) 0.5.0 (MIT).
+and plots. It was built by an engineering student who studies with Claude every day. 
 
 ## What you get
 
@@ -132,53 +129,6 @@ claude plugin test .
 MIT, see `LICENSE`; the upstream copyright notice is kept. MathJax is Apache 2.0
 (`hooks/mathjax/LICENSE`).
 
----
-
-## 한국어 안내
-
-Claude 데스크톱 앱의 Code tab은 줄 단독 수식(`$$...$$`)만 수식으로 그리고, 문장 속 inline 수식은
-원래 코드 그대로 보여줘요. Claude로 공부하는 공대생에게는 설명을 읽기가 훨씬 불편해지는 문제예요.
-
-이 mod를 설치하면 Claude의 답에 들어 있는 inline 수식과 줄 단독 수식이 모두 제대로 된 수식으로
-그려지고, Claude도 그렇게 쓰도록 안내받아요. Windows에 MiKTeX가 있으면 free-body diagram이나
-그래프 같은 TikZ 그림도 그릴 수 있어요. Claude로 매일 공부하는 공대생이 만든 mod이고,
-[zaahiral/claude-latex](https://github.com/zaahiral/claude-latex) 0.5.0(MIT)을 바탕으로 했어요.
-
-### 설치
-
-터미널에서:
-
-```sh
-claude plugin marketplace add yeonwooook/claude-study-latex
-claude plugin install study-latex@claude-study-latex
-```
-
-설치한 뒤에는 데스크톱 앱에서 **새 세션**을 열어야 해요. 수식 작성법 안내가 세션의 첫 메시지와
-함께 Claude에게 전달되기 때문이에요. 확인하려면 "응력 σ_x를 문장 안에 inline으로 써봐"라고
-물어보면 돼요.
-
-### 필요한 것
-
-- Claude 데스크톱 앱의 Code tab, Claude Code 2.1.287 이상
-- TikZ 그림을 쓸 때만: Windows와 MiKTeX. 수식만 쓸 때는 다른 게 필요 없어요.
-
-### 설정
-
-- **Math color**: 기본 `auto`(시스템의 밝은/어두운 모드를 따름). 앱 테마가 시스템과 다르면
-  `light`나 `dark`로 바꿔요.
-- **Compile TikZ blocks**: 기본 **꺼짐**. 켜려면 아래 안전 안내를 먼저 읽어 주세요.
-
-바꾸는 방법: 터미널에서 `claude plugin configure study-latex@claude-study-latex`를 실행한 뒤 새 세션을
-열어요.
-
-### 안전 (TikZ를 켜기 전에)
-
-수식을 그리는 부분은 파일을 읽거나 프로그램을 실행하지 않아요. TikZ compile은 Claude가 쓴 코드를
-내 컴퓨터의 MiKTeX로 실행하는데, Claude의 답은 Claude가 읽은 웹페이지나 파일의 영향을 받을 수
-있어요. 그래서 위험한 명령은 막아 두었어요(파일 접근, 매크로 정의, 패키지, 외부 프로그램, 네트워크).
-다만 차단 목록은 완벽할 수 없어서, 놓친 경우에는 TeX가 내 컴퓨터의 파일 일부를 읽어 그림 안에 보여줄 수
-있어요. 이 내용은 내 화면에만 보이고, 밖으로 전송되지 않으며, Claude도 그 그림을 보지 못해요. 그래서
-기본값을 꺼 두었어요.
 
 ### 한계
 
