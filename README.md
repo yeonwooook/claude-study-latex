@@ -129,9 +129,3 @@ claude plugin test .
 MIT, see `LICENSE`; the upstream copyright notice is kept. MathJax is Apache 2.0
 (`hooks/mathjax/LICENSE`).
 
-
-### 한계
-
-- 데스크톱 앱의 Code tab에서만 그려져요(터미널, VS Code, 폰은 원래대로 보여요).
-- 한 답에 수식 약 75개 또는 그림 4~6개까지예요. 넘으면 나머지는 앱이 원래대로 그려요.
-- 내가 보낸 메시지의 수식은 그대로 보여요.
